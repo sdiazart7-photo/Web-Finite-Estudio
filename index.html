@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finite Estudio - Fotografía de bodas</title>
+    <title>Finite Estudio - Fotografía de bodas en Tijuana</title>
     <script src="https://cdn.tailwindcss.com"></script>
     
     <!-- Meta Pixel Code -->
@@ -30,7 +30,6 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-P67NB8CXYP');
     </script>
     <!-- End Google Analytics -->
@@ -45,245 +44,90 @@
         @font-face {
             font-family: 'TheSeasons';
             src: url('https://res.cloudinary.com/drrhn6t1c/raw/upload/v1755826797/Fontspring-DEMO-theseasons-lt_wuifpf.otf') format('opentype');
-            font-weight: normal;
-            font-style: normal;
+            font-weight: normal; font-style: normal;
         }
         @font-face {
             font-family: 'GlacialIndifference';
             src: url('https://res.cloudinary.com/drrhn6t1c/raw/upload/v1755827417/GlacialIndifference-Regular_z5pngu.otf') format('opentype');
-            font-weight: normal;
-            font-style: normal;
+            font-weight: normal; font-style: normal;
         }
 
         body {
             font-family: 'GlacialIndifference', sans-serif;
-            background-color: #f8f7f3; /* brand-white */
-            color: #2b2b2b; /* brand-black */
+            background-color: #f8f7f3;
+            color: #2b2b2b;
         }
         
-        /* Aplicación de Cormorant Garamond a títulos y elementos destacados */
         h1, h2, h3, h4, .nav-link, .button-style, label, .testimonial-name {
             font-family: 'Cormorant Garamond', serif;
         }
 
-        /* Tipografía especial para el footer brand */
-        .footer-brand {
-            font-family: 'TheSeasons', serif;
-        }
+        .footer-brand { font-family: 'TheSeasons', serif; }
 
-        /* Clase para la transición suave de las secciones */
-        .page-section {
-            display: none;
-            animation: fadeIn 0.8s ease-in-out;
-        }
-        .page-section.active {
-            display: block;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+        .page-section { display: none; animation: fadeIn 0.8s ease-in-out; }
+        .page-section.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
         
-        /* Estilos del Header */
-        #main-header.header-scrolled {
-            background-color: #2b2b2b;
-        }
-        #main-header.header-scrolled .hamburger-line {
-             background-color: #f8f7f3;
-        }
-         #main-header:not(.header-scrolled) #header-logo {
-            filter: invert(1);
-        }
+        #main-header.header-scrolled { background-color: #2b2b2b; }
+        #main-header.header-scrolled .hamburger-line { background-color: #f8f7f3; }
+        #main-header:not(.header-scrolled) #header-logo { filter: invert(1); }
 
-        /* Estilo para el botón del menú móvil */
-        .hamburger-line {
-            background-color: #2b2b2b; /* brand-black */
-            transition: all 0.3s ease-in-out;
-        }
-        .hamburger-active > span:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
-        }
-        .hamburger-active > span:nth-child(2) {
-            opacity: 0;
-        }
-        .hamburger-active > span:nth-child(3) {
-            transform: rotate(-45deg) translate(7px, -7px);
-        }
+        .hamburger-line { background-color: #2b2b2b; transition: all 0.3s ease-in-out; }
+        .hamburger-active > span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger-active > span:nth-child(2) { opacity: 0; }
+        .hamburger-active > span:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
         
-        /* Estilos para el carrusel de Inicio */
-        .carousel-container {
-            width: 100%;
-            overflow: hidden;
-        }
-        .carousel-track {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-        .carousel-item {
-            height: 400px;
-            padding: 0 1px;
-            flex-shrink: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .carousel-item img {
-            height: 100%;
-            width: auto;
-            max-width: none;
-        }
+        .carousel-container { width: 100%; overflow: hidden; }
+        .carousel-track { display: flex; transition: transform 0.5s ease-in-out; }
+        .carousel-item { height: 400px; padding: 0 1px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+        .carousel-item img { height: 100%; width: auto; max-width: none; }
 
-        /* Estilos para la galería del portafolio */
-        .portfolio-gallery {
-            column-count: 1;
-            column-gap: 0.25rem;
-        }
+        .portfolio-gallery { column-count: 1; column-gap: 0.25rem; }
         @media (min-width: 640px) { .portfolio-gallery { column-count: 2; } }
         @media (min-width: 1024px) { .portfolio-gallery { column-count: 3; } }
-        .portfolio-item {
-            margin-bottom: 0.25rem;
-            break-inside: avoid;
-            cursor: pointer;
-        }
-        .portfolio-item img, .portfolio-item .placeholder {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: opacity 0.3s ease-in-out;
-        }
-        .portfolio-item:hover img {
-            opacity: 0.8;
-        }
+        .portfolio-item { margin-bottom: 0.25rem; break-inside: avoid; cursor: pointer; }
+        .portfolio-item img { width: 100%; height: auto; display: block; transition: opacity 0.3s ease-in-out; }
+        .portfolio-item:hover img { opacity: 0.8; }
 
-        /* Estilos para el Lightbox (pantalla completa) */
         .lightbox {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.9);
-            justify-content: center;
-            align-items: center;
+            display: none; position: fixed; z-index: 1000; top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.9); justify-content: center; align-items: center;
         }
-        .lightbox img { max-width: 90%; max-height: 85%; }
-        .lightbox .close { position: absolute; top: 15px; right: 35px; color: #fff; font-size: 40px; font-weight: bold; cursor: pointer; transition: 0.3s; }
-        .lightbox .close:hover { color: #bbb; }
-        .lightbox .prev, .lightbox .next { cursor: pointer; position: absolute; top: 50%; width: auto; padding: 16px; margin-top: -50px; color: white; font-weight: bold; font-size: 30px; transition: 0.3s; user-select: none; }
-        .lightbox .prev { left: 10px; }
-        .lightbox .next { right: 10px; }
-        .lightbox .prev:hover, .lightbox .next:hover { color: #bbb; }
+        .lightbox img { max-width: 90%; max-height: 85%; object-fit: contain; }
+        .lightbox .close { position: absolute; top: 15px; right: 35px; color: #fff; font-size: 40px; font-weight: bold; cursor: pointer; }
+        .lightbox .prev, .lightbox .next { cursor: pointer; position: absolute; top: 50%; width: auto; padding: 16px; color: white; font-weight: bold; font-size: 30px; user-select: none; }
+        .lightbox .prev { left: 10px; } .lightbox .next { right: 10px; }
 
-        /* Estilos para el carrusel de testimonios con flechas */
-        .testimonial-nav-arrows {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 1.5rem;
-        }
-        .testimonial-arrow {
-            cursor: pointer;
-            background: none;
-            border: none;
-            color: #f8f7f3;
-            font-size: 2.5rem;
-            transition: color 0.3s ease, transform 0.2s ease;
-            line-height: 1;
-        }
-        .testimonial-arrow:hover {
-            color: #937b63;
-            transform: scale(1.1);
-        }
-        .testimonial-arrow:active {
-            transform: scale(0.9);
-        }
-
-        .testimonial-name {
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 0.1em; /* tracking-widest */
-        }
-        .image-placeholder {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            border-radius: 0.25rem;
-        }
-        .bg-cover-image {
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
+        .image-placeholder { width: 100%; height: 100%; object-fit: contain; border-radius: 0.25rem; }
+        .bg-cover-image { background-size: cover; background-position: center; background-repeat: no-repeat; }
         
-        /* Efecto de Fade para el mini carrusel */
-        .fade-carousel-item {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            transition: opacity 1.2s ease-in-out;
-        }
-        .fade-carousel-item.active {
-            opacity: 1;
-        }
+        .fade-carousel-item { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 1.2s ease-in-out; }
+        .fade-carousel-item.active { opacity: 1; }
 
-        /* Estilos para la Tarjeta de WhatsApp Integrada en Contacto */
         .whatsapp-contact-card {
-            max-width: 400px;
-            margin: 0 auto;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            overflow: hidden;
-            border: 1px solid rgba(43, 43, 43, 0.1);
+            max-width: 400px; margin: 0 auto; background-color: #ffffff; border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden; border: 1px solid rgba(43, 43, 43, 0.1);
         }
-        .whatsapp-card-header {
-            background-color: #2b2b2b;
-            color: #f8f7f3;
-            padding: 24px;
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-        .whatsapp-card-body {
-            padding: 32px 24px;
-            background-color: #fdfdfb;
-        }
-        .whatsapp-card-bubble {
-            background-color: #f1f0e8;
-            padding: 16px;
-            border-radius: 0 12px 12px 12px;
-            font-size: 1rem;
-            color: #2b2b2b;
-            margin-bottom: 24px;
-            line-height: 1.5;
-            position: relative;
-        }
+        .whatsapp-card-header { background-color: #2b2b2b; color: #f8f7f3; padding: 24px; display: flex; align-items: center; gap: 16px; }
+        .whatsapp-card-body { padding: 32px 24px; background-color: #fdfdfb; }
+        .whatsapp-card-bubble { background-color: #f1f0e8; padding: 16px; border-radius: 0 12px 12px 12px; font-size: 1rem; color: #2b2b2b; margin-bottom: 24px; line-height: 1.5; }
     </style>
 </head>
 <body>
 
-    <!-- Header y Menú de Navegación -->
     <header id="main-header" class="sticky top-0 z-50 transition-colors duration-300">
         <nav class="container mx-auto px-6 py-5 flex justify-between items-center">
              <div class="flex items-center gap-4">
-                <!-- Menú Hamburguesa -->
                 <button id="hamburger-button" class="flex flex-col items-center justify-center z-50">
                     <span class="block w-6 h-0.5 my-1 hamburger-line"></span>
                     <span class="block w-6 h-0.5 my-1 hamburger-line"></span>
                     <span class="block w-6 h-0.5 my-1 hamburger-line"></span>
                 </button>
-                 <!-- Logo -->
                 <a href="#" class="text-2xl font-bold tracking-widest" data-page="home">
                     <img id="header-logo" src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1752514553/logo-FE-fondonegro_bctsg7.png" alt="Logo Finite Estudio" class="h-12 w-auto transition-all duration-300">
                 </a>
             </div>
         </nav>
-        <!-- Menú Desplegable a Pantalla Completa -->
         <div id="mobile-menu" class="hidden fixed inset-0 z-40 bg-[#2b2b2b]/95 backdrop-blur-sm text-[#f8f7f3] flex flex-col items-start justify-center p-8 md:p-16 space-y-8 text-2xl">
             <button id="close-menu-button" class="absolute top-8 right-8 text-4xl text-[#f8f7f3]">&times;</button>
             <a href="#" class="nav-link block py-2 hover:text-[#937b63] transition-colors" data-page="home">INICIO</a>
@@ -297,224 +141,236 @@
 
     <main>
         <!-- SECCIÓN DE INICIO -->
-        <section id="home" class="page-section active">
-            <!-- Carrusel Principal -->
+        <section id="home" class="page-section active text-[#2b2b2b]">
             <div class="carousel-container">
                 <div class="carousel-track">
-                    <div class="carousel-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1755892944/m_i_-_web_42_vg4znd.jpg" alt="Foto de boda 1"></div>
-                    <div class="carousel-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1755893177/a_r_-_web_15_zae6gx.jpg" alt="Foto de boda 2"></div>
-                    <div class="carousel-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1755714308/boda-a_a-339_xbgnra.jpg" alt="Foto de boda 3"></div>
-                    <div class="carousel-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1755893177/a_r_-_web_1_f0pgxr.jpg" alt="Foto de boda 4"></div>
-                    <div class="carousel-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1755714256/sn-m_i_84_iil2lk.jpg" alt="Foto de boda 5"></div>
-                    <div class="carousel-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1755894727/boda-l_e-92_vugtow.jpg" alt="Foto de boda 6"></div>
-                    <div class="carousel-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1755714285/boda-y_o-304_hifnfq.jpg" alt="Foto de boda 7"></div>
+                    <div class="carousel-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1755892944/m_i_-_web_42_vg4znd.jpg" alt="Foto 1"></div>
+                    <div class="carousel-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1755893177/a_r_-_web_15_zae6gx.jpg" alt="Foto 2"></div>
+                    <div class="carousel-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1755714308/boda-a_a-339_xbgnra.jpg" alt="Foto 3"></div>
+                    <div class="carousel-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1755893177/a_r_-_web_1_f0pgxr.jpg" alt="Foto 4"></div>
+                    <div class="carousel-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1755714256/sn-m_i_84_iil2lk.jpg" alt="Foto 5"></div>
                 </div>
             </div>
 
             <div class="text-center py-16 md:py-20 px-6">
-                 <h1 class="text-5xl md:text-7xl tracking-wider leading-tight">MÁS QUE FOTO <br> VIAJE EMOCIONAL</h1>
+                 <h1 class="text-5xl md:text-7xl tracking-wider leading-tight uppercase">Más que foto <br> Viaje emocional</h1>
             </div>
 
-            <!-- Sección "Hay días que no se repiten" -->
             <div class="container mx-auto px-6 py-20 md:py-32">
-                <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="flex flex-col md:flex-row items-center gap-12 text-[#2b2b2b]">
                     <div class="md:w-1/2 text-center md:text-left">
-                        <h2 class="text-4xl md:text-5xl leading-tight mb-6 uppercase text-[#2b2b2b]">Hay días que no se repiten</h2>
-                        <p class="text-base text-[#2b2b2b]/80 mb-4">Tu boda es uno de ellos.</p>
-                        <p class="text-base text-[#2b2b2b]/80 mb-8">Y si no puedes volver a ella de verdad cuando veas tus fotos, algo se pierde. <strong>La promesa es que la revivas.</strong></p>
+                        <h2 class="text-4xl md:text-5xl leading-tight mb-6 uppercase">Hay días que no se repiten</h2>
+                        <p class="text-base mb-4 opacity-80">Tu boda es uno de ellos. Porque vas a estar tranquila. Porque vas a sentirte tú.</p>
+                        <p class="text-base mb-8 opacity-80">Y si no puedes volver a ella de verdad cuando veas tus fotos, algo se pierde. <strong>La promesa es que la revivas.</strong></p>
                         <a href="#" class="button-style inline-block bg-[#937b63] text-[#f8f7f3] py-4 px-10 tracking-widest hover:bg-[#826c54] transition-colors nav-link" data-page="contacto">REVIVE TU BODA AQUÍ</a>
                     </div>
                     <div class="md:w-1/2 relative rounded h-[500px] overflow-hidden">
                         <div id="mini-fade-carousel" class="relative w-full h-full">
-                            <div class="fade-carousel-item active h-full w-full">
-                                <img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947826/jpeg-optimizer_boda-l_e-36_utndsp.jpg" alt="Boda en exterior" class="image-placeholder">
-                            </div>
-                            <div class="fade-carousel-item h-full w-full">
-                                <img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947826/jpeg-optimizer_boda-l_e-34_m5g9rf.jpg" alt="Detalle de vestido" class="image-placeholder">
-                            </div>
-                            <div class="fade-carousel-item h-full w-full">
-                                <img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947816/jpeg-optimizer_boda-l_e-75_u7fsae.jpg" alt="Novios sonriendo" class="image-placeholder">
-                            </div>
+                            <div class="fade-carousel-item active h-full w-full"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947826/jpeg-optimizer_boda-l_e-36_utndsp.jpg" alt="Foto 1" class="image-placeholder"></div>
+                            <div class="fade-carousel-item h-full w-full"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947826/jpeg-optimizer_boda-l_e-34_m5g9rf.jpg" alt="Foto 2" class="image-placeholder"></div>
+                            <div class="fade-carousel-item h-full w-full"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947816/jpeg-optimizer_boda-l_e-75_u7fsae.jpg" alt="Foto 3" class="image-placeholder"></div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Sección "Más allá de posar" -->
             <div class="bg-[#2b2b2b] text-[#f8f7f3] text-center py-20 md:py-32 px-6">
-                <h2 class="text-4xl md:text-5xl mb-6 uppercase">Más allá de posar</h2>
-                <p class="max-w-2xl mx-auto text-[#f8f7f3]/80 mb-8">Tampoco tienes que sonreír todo el tiempo, ni pararte 'bonito', ni fingir que no estás nerviosa. Ese día no vas a actuar. Vas a sentir. Y eso, por sí solo, va a ser <strong>suficiente</strong>.</p>
+                <h2 class="text-4xl md:text-5xl mb-6 uppercase text-[#f8f7f3]">Más allá de posar</h2>
+                <p class="max-w-2xl mx-auto opacity-80 mb-8 text-[#f8f7f3]">Tampoco tienes que sonreír todo el tiempo, ni pararte 'bonito', ni fingir que no estás nerviosa. Ese día no vas a actuar. Vas a sentir. Y eso, por sí solo, va a ser <strong>suficiente</strong>.</p>
                 <a href="#" class="button-style inline-block bg-[#f8f7f3] text-[#2b2b2b] py-4 px-10 tracking-widest hover:bg-[#e9e8e4] transition-colors nav-link" data-page="contacto">REVIVE TU BODA AQUÍ</a>
             </div>
 
-            <!-- Sección "La única forma de volver" -->
             <div class="text-center py-20 md:py-32 px-6">
-                <div class="w-full max-w-md mx-auto h-[500px] mb-12 rounded">
-                    <img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947534/m_i_-_web_28_lqgdyp.jpg" alt="Beso de los novios" class="image-placeholder h-full">
+                <div class="w-full max-w-md mx-auto h-[500px] mb-12 rounded overflow-hidden text-[#2b2b2b]">
+                    <img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947534/m_i_-_web_28_lqgdyp.jpg" alt="Beso" class="image-placeholder h-full text-[#2b2b2b]">
                 </div>
                 <h2 class="text-4xl md:text-5xl mb-6 uppercase text-[#2b2b2b]">La única forma de volver</h2>
-                <p class="max-w-xl mx-auto text-[#2b2b2b]/80 mb-8">Las flores se secan. El vestido se guarda. Lo único que te devuelve ese día son fotografías que se sienten.</p>
+                <p class="max-w-xl mx-auto opacity-80 mb-8 text-[#2b2b2b]">Las flores se secan. El vestido se guarda. Lo único que te devuelve ese día son fotografías que se sienten.</p>
                 <a href="#" class="button-style inline-block bg-[#937b63] text-[#f8f7f3] py-4 px-10 tracking-widest hover:bg-[#826c54] transition-colors nav-link" data-page="contacto">REVIVE TU BODA AQUÍ</a>
             </div>
 
-            <!-- Sección "Te vas a ver bien" -->
             <div class="relative min-h-[700px] flex items-center justify-center text-center text-[#f8f7f3] bg-cover-image py-20 px-6" style="background-image: url('https://res.cloudinary.com/drrhn6t1c/image/upload/v1755893180/a_r_-_web_28_eram4m.jpg');">
                  <div class="absolute inset-0 bg-black opacity-50"></div>
                  <div class="z-10">
-                    <h2 class="text-4xl md:text-5xl mb-6 uppercase">Te vas a ver bien</h2>
-                    <p class="max-w-xl mx-auto">Porque vas a estar tranquila. Porque vas a sentirte tú. <br> Te vas a ver bien, porque te vas a sentir bien.</p>
+                    <h2 class="text-4xl md:text-5xl mb-6 uppercase text-[#f8f7f3]">Te vas a ver bien</h2>
+                    <p class="max-w-xl mx-auto text-[#f8f7f3]">Porque vas a estar tranquila. Porque vas a sentirte tú. <br> Te vas a ver bien, porque te vas a sentir bien.</p>
                     <a href="#" class="button-style mt-8 inline-block bg-[#937b63] text-[#f8f7f3] py-4 px-10 tracking-widest hover:bg-[#826c54] transition-colors nav-link" data-page="contacto">REVIVE TU BODA AQUÍ</a>
                  </div>
-            </div>
-
-            <!-- Sección Testimonios -->
-            <div class="testimonial-carousel-container bg-[#2b2b2b] text-[#f8f7f3] py-20 md:py-32 px-6 text-center relative overflow-hidden">
-                <h2 class="text-4xl md:text-5xl mb-12 uppercase">Testimonios</h2>
-                <div class="testimonial-track flex transition-transform duration-500 ease-in-out">
-                    <div class="testimonial-slide w-full flex-shrink-0 px-4"><div class="max-w-3xl mx-auto"><p class="text-lg text-[#f8f7f3]/90 italic mb-6">"¡Gracias por todo! Nos encantaron tus fotos. Estoy muy contenta con los recuerdos que creaste del día más bonito y más especial del inicio de nuestros 'juntos por siempre.'"</p><p class="testimonial-name">MARLENE & IRVING</p></div></div>
-                    <div class="testimonial-slide w-full flex-shrink-0 px-4"><div class="max-w-3xl mx-auto"><p class="text-lg text-[#f8f7f3]/90 italic mb-6">"No quería dejar pasar el agradecerte personalmente por todo tu trabajo el día de nuestra boda y por el resultado de nuestras fotos, ¡nos encantaron! No te miento cuando las empecé a ver me dieron ganas de llorar, lograste inmortalizar y capturar nuestras emociones ese día y ver las fotos es como volver a vivirlo, muchas muchas gracias."</p><p class="testimonial-name">ABIGAIL & ALEJANDRO</p></div></div>
-                    <div class="testimonial-slide w-full flex-shrink-0 px-4"><div class="max-w-3xl mx-auto"><p class="text-lg text-[#f8f7f3]/90 italic mb-6">"Gracias Saúl de verdad estas fotos hacen revivir cada escena de nuestra boda, así como fue la boda de nuestros sueños, fuiste el fotógrafo de nuestros sueños. Estamos agradecidos por tu trabajo, puntualidad y la manera en que nos comprendiste al dar amor por cada una de estas fotos."</p><p class="testimonial-name">YANELI & OMAR</p></div></div>
-                </div>
-                <div class="testimonial-nav-arrows">
-                    <button class="testimonial-arrow prev-btn">&#8592;</button>
-                    <button class="testimonial-arrow next-btn">&#8594;</button>
-                </div>
             </div>
         </section>
 
         <!-- SECCIÓN LA PROMESA -->
-        <section id="la-promesa" class="page-section">
+        <section id="la-promesa" class="page-section text-[#2b2b2b]">
             <div class="text-center py-20 md:py-32 px-6">
                 <h2 class="text-4xl md:text-5xl mb-10 uppercase text-[#2b2b2b]">Más que fotos</h2>
-                <div class="w-full max-w-3xl mx-auto h-[600px] mb-10 rounded">
-                    <img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947817/jpeg-optimizer_boda-l_e-87_uyfvog.jpg" alt="Novios en la pista de baile" class="image-placeholder h-full">
+                <div class="w-full max-w-3xl mx-auto h-[600px] mb-10 rounded overflow-hidden">
+                    <img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947817/jpeg-optimizer_boda-l_e-87_uyfvog.jpg" alt="Baile" class="image-placeholder h-full">
                 </div>
-                <p class="text-lg text-[#2b2b2b]/80 mb-10">Es una forma de regresar. <br> Es un viaje emocional.</p>
+                <p class="text-lg opacity-80 mb-10 text-[#2b2b2b]">Es una forma de regresar. <br> Es un viaje emocional.</p>
                 <a href="#" class="button-style inline-block bg-[#937b63] text-[#f8f7f3] py-4 px-10 tracking-widest hover:bg-[#826c54] transition-colors nav-link" data-page="contacto">REVIVE TU BODA AQUÍ</a>
             </div>
+            
             <div class="bg-[#2b2b2b] text-[#f8f7f3] text-center py-20 md:py-32 px-6">
                 <h2 class="text-4xl md:text-5xl mb-6 uppercase">Se trata de emociones</h2>
-                <p class="max-w-2xl mx-auto text-[#f8f7f3]/80 mb-8">No necesitas actuar para verte bien. Solo necesitas estar tranquila. Y sentir que todo está fluyendo, sin cámaras invasivas, sin "ponte aquí", sin sonrisas forzadas.</p>
+                <p class="max-w-2xl mx-auto opacity-80 mb-8 text-[#f8f7f3]">No necesitas actuar para verte bien. Solo necesitas estar tranquila. Y sentir que todo está fluyendo, sin cámaras invasivas, sin "ponte aquí", sin sonrisas forzadas.</p>
                 <a href="#" class="button-style inline-block bg-[#f8f7f3] text-[#2b2b2b] py-4 px-10 tracking-widest hover:bg-[#e9e8e4] transition-colors nav-link" data-page="contacto">REVIVE TU BODA AQUÍ</a>
             </div>
-            <div class="container mx-auto px-6 py-20 md:py-32 border-b border-[#2b2b2b]/10">
-                <div class="flex flex-col md:flex-row justify-between items-center gap-10">
+
+            <div class="container mx-auto px-6 py-20 md:py-32 border-b border-[#2b2b2b]/10 text-[#2b2b2b]">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-10 text-[#2b2b2b]">
                     <div class="md:w-1/2 text-center md:text-left">
-                        <h2 class="text-4xl md:text-5xl leading-tight uppercase text-[#2b2b2b]">Fotos que se activan por dentro</h2>
+                        <h2 class="text-4xl md:text-5xl leading-tight uppercase">Fotos que se activan por dentro</h2>
                     </div>
-                    <div class="md:w-1/2 text-center md:text-left">
-                        <p class="text-base text-[#2b2b2b]/80">Cada foto está pensada para eso: que te detengas, la veas, y algo se active en ti. Una emoción, una memoria, un golpecito en el pecho.</p>
+                    <div class="md:w-1/2 text-center md:text-left text-[#2b2b2b]">
+                        <p class="text-base opacity-80">Cada foto está pensada para eso: que te detengas, la veas, y algo se active en ti. Una emoción, una memoria, un golpecito en el pecho.</p>
                     </div>
                 </div>
             </div>
+
             <div class="relative min-h-[700px] flex items-center justify-center text-center text-[#f8f7f3] bg-cover-image py-20 px-6" style="background-image: url('https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947620/a_r_-_web_17_ttogai.jpg');">
                  <div class="absolute inset-0 bg-black opacity-50"></div>
-                 <div class="z-10">
-                    <h2 class="text-4xl md:text-5xl mb-6 uppercase">Lo que sentiste</h2>
-                    <p class="max-w-xl mx-auto">Lo que vivas ese día no va a pasar igual dos veces. Y nadie más va a sentirlo como tú. Por eso, las fotos son para volver.</p>
+                 <div class="z-10 text-[#f8f7f3]">
+                    <h2 class="text-4xl md:text-5xl mb-6 uppercase text-[#f8f7f3]">Lo que sentiste</h2>
+                    <p class="max-w-xl mx-auto text-[#f8f7f3]">Lo que vivas ese día no va a pasar igual dos veces. Y nadie más va a sentirlo como tú. Por eso, las fotos son para volver.</p>
                     <a href="#" class="button-style mt-8 inline-block bg-[#937b63] text-[#f8f7f3] py-4 px-10 tracking-widest hover:bg-[#826c54] transition-colors nav-link" data-page="contacto">REVIVE TU BODA AQUÍ</a>
                  </div>
             </div>
 
-            <!-- SECCIÓN PREGUNTAS FRECUENTES -->
-            <div class="container mx-auto px-6 py-20 md:py-32">
-                <div class="max-w-5xl mx-auto text-[#2b2b2b]">
-                    <h2 class="text-3xl text-left mb-16 font-bold tracking-wider uppercase">PREGUNTAS FRECUENTES</h2>
-                    <div class="space-y-16">
-                        <div class="flex flex-col md:flex-row gap-6 md:gap-16 border-b border-[#2b2b2b]/10 pb-8">
-                            <div class="md:w-1/3"><h3 class="text-2xl font-bold leading-tight">¿Dónde estás ubicado?</h3></div>
-                            <div class="md:w-2/3"><p class="text-lg text-[#2b2b2b]/80">En Tijuana, Baja California. Pero mi cámara no se queja si la llevo de viaje.</p></div>
-                        </div>
-                        <div class="flex flex-col md:flex-row gap-6 md:gap-16 border-b border-[#2b2b2b]/10 pb-8">
-                            <div class="md:w-1/3"><h3 class="text-2xl font-bold leading-tight">¿Haces bodas destino?</h3></div>
-                            <div class="md:w-2/3"><p class="text-lg text-[#2b2b2b]/80">Sí. Si el amor viaja, yo también.</p></div>
-                        </div>
-                        <div class="flex flex-col md:flex-row gap-6 md:gap-16 border-b border-[#2b2b2b]/10 pb-8">
-                            <div class="md:w-1/3"><h3 class="text-2xl font-bold leading-tight">¿Editas las fotos?</h3></div>
-                            <div class="md:w-2/3"><p class="text-lg text-[#2b2b2b]/80">Claro. Se hace una selección de las mejores fotos del día y se editan de manera detallada, pero sin exagerar.</p></div>
-                        </div>
-                        <div class="flex flex-col md:flex-row gap-6 md:gap-16 border-b border-[#2b2b2b]/10 pb-8">
-                            <div class="md:w-1/3"><h3 class="text-2xl font-bold leading-tight">¿Qué métodos de pago aceptas?</h3></div>
-                            <div class="md:w-2/3"><p class="text-lg text-[#2b2b2b]/80">Efectivo, transferencia bancaria y pago con tarjeta.</p></div>
-                        </div>
-                        <div class="flex flex-col md:flex-row gap-6 md:gap-16 border-b border-[#2b2b2b]/10 pb-8">
-                            <div class="md:w-1/3"><h3 class="text-2xl font-bold leading-tight">¿Cómo reservo la fecha de mi boda?</h3></div>
-                            <div class="md:w-2/3"><p class="text-lg text-[#2b2b2b]/80">Es simple: Agendamos una cita para decidir el paquete ideal para su boda. Si todo hace clic, firmas contrato y reservas con un anticipo. Y listo, la fecha es tuya.</p></div>
-                        </div>
-                        <div class="flex flex-col md:flex-row gap-6 md:gap-16 border-b border-[#2b2b2b]/10 pb-8">
-                            <div class="md:w-1/3"><h3 class="text-2xl font-bold leading-tight">¿Cuánto tiempo tardas en entregar las fotos?</h3></div>
-                            <div class="md:w-2/3"><p class="text-lg text-[#2b2b2b]/80">El tiempo de entrega de tus fotos es de 30 a 35 días hábiles.</p></div>
-                        </div>
-                        <div class="flex flex-col md:flex-row gap-6 md:gap-16 border-b border-[#2b2b2b]/10 pb-8">
-                            <div class="md:w-1/3"><h3 class="text-2xl font-bold leading-tight">¿Cuándo y dónde se hace la sesión Save the Date?</h3></div>
-                            <div class="md:w-2/3"><p class="text-lg text-[#2b2b2b]/80">Lo ideal es hacerla 3 a 6 meses antes de la boda. Tú eliges el lugar (también te recomiendo lugares) el mejor horario para que no haya luz fea. Y no te preocupes, no necesitas saber posar.</p></div>
-                        </div>
+            <!-- SECCIÓN DE INVERSIÓN -->
+            <div class="container mx-auto px-6 py-20 md:py-32 text-[#2b2b2b]">
+                <h2 class="text-3xl text-center mb-24 font-bold tracking-wider uppercase">INVERSIÓN</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-stretch mb-24 text-[#2b2b2b]">
+                    <!-- Columna 1: SESIÓN PAREJAS -->
+                    <div class="flex flex-col text-center border-y md:border-y-0 md:border-x border-[#937b63]/30 py-16 px-6 h-full">
+                        <p class="text-[10px] tracking-[0.2em] uppercase opacity-60 mb-1">SESIÓN</p>
+                        <h3 class="text-4xl font-bold mb-6 tracking-[0.2em] uppercase">PAREJAS</h3>
+                        <div class="w-12 h-0.5 bg-[#937b63] mx-auto mb-8"></div>
+                        <p class="text-sm opacity-70 mb-6 leading-relaxed italic text-[#2b2b2b]">
+                            Entre 1 a 2 horas de sesión.
+                        </p>
+                        <p class="text-sm font-medium tracking-tight mt-auto text-[#2b2b2b]">
+                            Entre $3,000 MXN a $3,650 MXN
+                        </p>
+                    </div>
+
+                    <!-- Columna 2: EXPERIENCIA PREMIER -->
+                    <div class="flex flex-col text-center border-y md:border-y-0 md:border-x border-[#937b63]/30 py-16 px-6 h-full text-[#2b2b2b]">
+                        <p class="text-[10px] tracking-[0.2em] uppercase opacity-60 mb-1">EXPERIENCIA</p>
+                        <h3 class="text-4xl font-bold mb-6 tracking-[0.2em] uppercase text-[#2b2b2b]">PREMIER</h3>
+                        <div class="w-12 h-0.5 bg-[#937b63] mx-auto mb-8"></div>
+                        <p class="text-sm opacity-70 mb-6 leading-relaxed italic text-[#2b2b2b]">
+                            Entre 6 a 12 horas de cobertura <br>el día de tu boda
+                        </p>
+                        <p class="text-sm font-medium tracking-tight mt-auto text-[#2b2b2b]">
+                            Entre $25,000 MXN a $20,000 MXN
+                        </p>
+                    </div>
+
+                    <!-- Columna 3: COBERTURA BODAS -->
+                    <div class="flex flex-col text-center border-y md:border-y-0 md:border-x border-[#937b63]/30 py-16 px-6 h-full text-[#2b2b2b]">
+                        <p class="text-[10px] tracking-[0.2em] uppercase opacity-60 mb-1">COBERTURA</p>
+                        <h3 class="text-4xl font-bold mb-6 tracking-[0.2em] uppercase text-[#2b2b2b]">BODAS</h3>
+                        <div class="w-12 h-0.5 bg-[#937b63] mx-auto mb-8 text-[#2b2b2b]"></div>
+                        <p class="text-sm opacity-70 mb-6 leading-relaxed italic text-[#2b2b2b]">
+                            Entre 2 a 4 horas de cobertura <br>el dia de tu boda
+                        </p>
+                        <p class="text-sm font-medium tracking-tight mt-auto text-[#2b2b2b]">
+                            entre $5,000 MXN a $10,000 MXN
+                        </p>
                     </div>
                 </div>
+
+                <div class="max-w-4xl mx-auto text-center text-[#2b2b2b]">
+                    <p class="text-[10px] md:text-xs opacity-80 leading-relaxed font-bold tracking-widest uppercase">
+                        LOS COSTOS DE INVERSIÓN PRESENTADOS SON UN ESTIMADO ENTRE EL MÍNIMO Y MÁXIMO. PARA UN PRESUPUESTO EXACTO POR FAVOR CONTÁCTANOS Y TE COMPARTIREMOS LA PROPUESTA ADECUADA PARA TU BODA.
+                    </p>
+                </div>
             </div>
+
             <div class="text-center py-20 md:py-32 px-6">
                 <h2 class="text-4xl md:text-5xl mb-6 uppercase text-[#2b2b2b]">Si esto te hizo sentido, hablemos</h2>
-                <p class="max-w-xl mx-auto text-[#2b2b2b]/80 mb-8">Será el primer paso para revivir tu boda.</p>
+                <p class="max-w-xl mx-auto opacity-80 mb-8 text-[#2b2b2b]">Será el primer paso para revivir tu boda.</p>
                 <a href="#" class="button-style inline-block bg-[#937b63] text-[#f8f7f3] py-4 px-10 tracking-widest hover:bg-[#826c54] transition-colors nav-link" data-page="contacto">REVIVE TU BODA AQUÍ</a>
             </div>
         </section>
 
         <!-- SECCIÓN SOBRE MÍ -->
-        <section id="sobre-mi" class="page-section">
-            <div class="container mx-auto px-6 py-20 md:py-32">
+        <section id="sobre-mi" class="page-section text-[#2b2b2b]">
+            <div class="container mx-auto px-6 py-20 md:py-32 text-[#2b2b2b]">
                 <div class="flex flex-col md:flex-row items-center gap-12 text-[#2b2b2b]">
-                    <div class="md:w-1/2 text-center md:text-left">
-                        <h2 class="text-4xl md:text-5xl leading-tight uppercase">Quién está detrás</h2>
-                        <h3 class="text-4xl md:text-5xl leading-tight text-[#937b63] font-bold mb-6">DE FINITE ESTUDIO</h3>
-                        <p class="text-base text-[#2b2b2b]/80 mb-8">Me obsesiona el cine, la música y sí, la fotografía. Y quiero ayudarte a que puedas revivir tu boda.</p>
-                        <p class="text-sm text-[#2b2b2b]/60">Saúl Díaz | Fotógrafo de bodas</p>
+                    <div class="md:w-1/2 text-center md:text-left text-[#2b2b2b]">
+                        <h2 class="text-4xl md:text-5xl leading-tight uppercase text-[#2b2b2b]">Quién está detrás</h2>
+                        <h3 class="text-4xl md:text-5xl leading-tight text-[#937b63] font-bold mb-6 uppercase text-[#937b63]">DE FINITE ESTUDIO</h3>
+                        <p class="text-base mb-8 opacity-80 text-[#2b2b2b]">Me obsesiona el cine, la música y sí, la fotografía. Y quiero ayudarte a que puedas revivir tu boda.</p>
+                        <p class="text-sm opacity-60">Saúl Díaz | Fotógrafo de bodas</p>
                     </div>
                     <div class="md:w-1/2">
-                        <div class="h-[600px] w-full rounded"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756948701/jpeg-optimizer_sart-2_t4jwtx.jpg" alt="Fotógrafo Saúl Díaz" class="image-placeholder h-full"></div>
+                        <div class="h-[600px] w-full rounded overflow-hidden text-[#2b2b2b]"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756948701/jpeg-optimizer_sart-2_t4jwtx.jpg" alt="Saúl Díaz" class="image-placeholder h-full text-[#2b2b2b]"></div>
                     </div>
                 </div>
             </div>
-            <div class="bg-[#2b2b2b] text-[#f8f7f3] text-center py-20 md:py-32 px-6">
-                <h2 class="text-4xl md:text-5xl mb-6 uppercase">Empieza antes de la boda</h2>
-                <p class="max-w-2xl mx-auto text-[#f8f7f3]/80 mb-8">Antes del vestido, antes del estrés, hacemos una sesión. Para que sientas que puedes estar frente a una cámara... y seguir siendo tú.</p>
+            <div class="bg-[#2b2b2b] text-[#f8f7f3] text-center py-20 md:py-32 px-6 text-[#f8f7f3]">
+                <h2 class="text-4xl md:text-5xl mb-6 uppercase text-[#f8f7f3]">Empieza antes de la boda</h2>
+                <p class="max-w-2xl mx-auto opacity-80 mb-8 text-[#f8f7f3]">Antes del vestido, antes del estrés, hacemos una sesión. Para que sientas que puedes estar frente a una cámara... y seguir siendo tú.</p>
                 <a href="#" class="button-style inline-block bg-[#f8f7f3] text-[#2b2b2b] py-4 px-10 tracking-widest hover:bg-[#e9e8e4] transition-colors nav-link" data-page="contacto">REVIVE TU BODA AQUÍ</a>
             </div>
-            <div class="container mx-auto px-6 py-20 md:py-32 space-y-20 text-[#2b2b2b]">
-                <div class="flex flex-col md:flex-row-reverse items-center gap-12">
-                    <div class="md:w-1/2 text-center md:text-left">
-                        <h2 class="text-4xl md:text-5xl leading-tight mb-6 uppercase">Confianza primero, cámara después</h2>
-                        <p class="text-base text-[#2b2b2b]/80">Cuando ya viviste cómo se siente estar frente a la cámara sin tensión, el día de tu boda cambia. Dejas de preocuparte por "cómo salir". Estás presente. Lo estás viviendo.</p>
+
+            <div class="container mx-auto px-6 py-20 md:py-32 space-y-20">
+                <div class="flex flex-col md:flex-row-reverse items-center gap-12 text-center md:text-left text-[#2b2b2b]">
+                    <div class="md:w-1/2 text-[#2b2b2b]">
+                        <h2 class="text-4xl md:text-5xl leading-tight mb-6 uppercase text-[#2b2b2b]">Confianza primero, cámara después</h2>
+                        <p class="text-base opacity-80 text-[#2b2b2b]">Cuando ya viviste cómo se siente estar frente a la cámara sin tensión, el día de tu boda cambia. Dejas de preocuparte por "cómo salir". Estás presente. Lo estás viviendo.</p>
                     </div>
                     <div class="md:w-1/2">
-                        <div class="h-[600px] w-full rounded"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947816/jpeg-optimizer_boda-l_e-75_u7fsae.jpg" alt="Pareja de novios abrazados" class="image-placeholder h-full"></div>
+                        <div class="h-[600px] w-full rounded overflow-hidden text-[#2b2b2b]"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947816/jpeg-optimizer_boda-l_e-75_u7fsae.jpg" alt="Confianza" class="image-placeholder h-full text-[#2b2b2b]"></div>
                     </div>
                 </div>
-                <div class="flex flex-col md:flex-row items-center gap-12">
-                     <div class="md:w-1/2 text-center md:text-left">
-                        <h2 class="text-4xl md:text-5xl leading-tight mb-6 uppercase">Vas a volver a sentirlo todo</h2>
-                        <p class="text-base text-[#2b2b2b]/80">Vas a volver. A esa risa que se te escapó, la respiración agitada antes de caminar, ese abrazo que no querías soltar.</p>
+                <div class="flex flex-col md:flex-row items-center gap-12 text-center md:text-left text-[#2b2b2b]">
+                     <div class="md:w-1/2 text-[#2b2b2b]">
+                        <h2 class="text-4xl md:text-5xl leading-tight mb-6 uppercase text-[#2b2b2b]">Vas a volver a sentirlo todo</h2>
+                        <p class="text-base opacity-80 text-[#2b2b2b]">Vas a volver. A esa risa que se te escapó, la respiración agitada antes de caminar, ese abrazo que no querías soltar.</p>
                     </div>
-                    <div class="md:w-1/2">
-                        <div class="h-[600px] w-full rounded"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947564/a_r_-_web_24_fyqhg9.jpg" alt="Novios caminando juntos" class="image-placeholder h-full"></div>
+                    <div class="md:w-1/2 text-[#2b2b2b]">
+                        <div class="h-[600px] w-full rounded overflow-hidden text-[#2b2b2b]"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947564/a_r_-_web_24_fyqhg9.jpg" alt="Novios" class="image-placeholder h-full text-[#2b2b2b]"></div>
                     </div>
                 </div>
             </div>
             
-            <!-- SECCIÓN ELIMINADA: NO BUSCAS SOLO UN FOTÓGRAFO (PARALLAX) -->
+            <div class="relative min-h-[700px] bg-cover-image text-[#2b2b2b]" style="background-image: url('https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947587/a_r_-_web_13_twc7c5.jpg');">
+                 <div class="absolute inset-0 bg-black opacity-30"></div>
+            </div>
 
-            <div class="text-center py-20 md:py-32 px-6">
+            <div class="text-center py-20 md:py-32 px-6 text-[#2b2b2b]">
                 <h2 class="text-4xl md:text-5xl mb-4 uppercase text-[#2b2b2b]">Escríbeme</h2>
-                <p class="text-lg text-[#2b2b2b]/80 mb-8">Y logremos revivir tu boda</p>
+                <p class="text-lg opacity-80 mb-8">Y logremos revivir tu boda</p>
                 <a href="#" class="button-style inline-block bg-[#937b63] text-[#f8f7f3] py-4 px-10 tracking-widest hover:bg-[#826c54] transition-colors nav-link" data-page="contacto">REVIVE TU BODA AQUÍ</a>
             </div>
+
+            <!-- TESTIMONIOS (MOVIDOS AQUÍ - AL FINAL DE SOBRE MÍ) -->
             <div class="testimonial-carousel-container bg-[#2b2b2b] text-[#f8f7f3] py-20 md:py-24 px-6 text-center relative overflow-hidden">
-                <h2 class="text-4xl md:text-5xl mb-12 uppercase">Testimonios</h2>
-                <div class="testimonial-track flex transition-transform duration-500 ease-in-out">
-                    <div class="testimonial-slide w-full flex-shrink-0 px-4"><div class="max-w-3xl mx-auto"><p class="text-lg text-[#f8f7f3]/90 italic mb-6">"¡Gracias por todo! Nos encantaron tus fotos. Estoy muy contenta con los recuerdos que creaste del día más bonito y más especial del inicio de nuestros 'juntos por siempre.'"</p><p class="testimonial-name">MARLENE & IRVING</p></div></div>
-                    <div class="testimonial-slide w-full flex-shrink-0 px-4"><div class="max-w-3xl mx-auto"><p class="text-lg text-[#f8f7f3]/90 italic mb-6">"No quería dejar pasar el agradecerte personalmente por todo tu trabajo el día de nuestra boda y por el resultado de nuestras fotos, ¡nos encantaron! No te miento cuando las empecé a ver me dieron ganas de llorar, lograste inmortalizar y capturar nuestras emociones ese día y ver las fotos es como volver a vivirlo, muchas muchas gracias."</p><p class="testimonial-name">ABIGAIL & ALEJANDRO</p></div></div>
-                    <div class="testimonial-slide w-full flex-shrink-0 px-4"><div class="max-w-3xl mx-auto"><p class="text-lg text-[#f8f7f3]/90 italic mb-6">"Gracias Saúl de verdad estas fotos hacen revivir cada escena de nuestra boda, así como fue la boda de nuestros sueños, fuiste el fotógrafo de nuestros sueños. Estamos agradecidos por tu trabajo, puntualidad y la manera en que nos comprendiste al dar amor por cada una de estas fotos."</p><p class="testimonial-name">YANELI & OMAR</p></div></div>
+                <h2 class="text-4xl md:text-5xl mb-12 uppercase text-[#f8f7f3]">Testimonios</h2>
+                <div class="testimonial-track flex transition-transform duration-500 ease-in-out text-[#f8f7f3]">
+                    <div class="testimonial-slide w-full flex-shrink-0 px-4 text-[#f8f7f3]">
+                        <div class="max-w-3xl mx-auto text-[#f8f7f3]">
+                            <p class="text-lg italic mb-6">"¡Gracias por todo! Nos encantaron tus fotos. Estoy muy contenta con los recuerdos que creaste del día más bonito y más especial del inicio de nuestros 'juntos por siempre.'"</p>
+                            <p class="testimonial-name">MARLENE & IRVING</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide w-full flex-shrink-0 px-4 text-[#f8f7f3]">
+                        <div class="max-w-3xl mx-auto text-[#f8f7f3]">
+                            <p class="text-lg italic mb-6">"No quería dejar pasar el agradecerte personalmente por todo tu trabajo el día de nuestra boda y por el resultado de nuestras fotos, ¡nos encantaron! No te miento cuando las empecé a ver me dieron ganas de llorar, lograste inmortalizar y capturar nuestras emociones ese día y ver las fotos es como volver a vivirlo, muchas muchas gracias."</p>
+                            <p class="testimonial-name">ABIGAIL & ALEJANDRO</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide w-full flex-shrink-0 px-4 text-[#f8f7f3]">
+                        <div class="max-w-3xl mx-auto text-[#f8f7f3]">
+                            <p class="text-lg italic mb-6">"Gracias Saúl de verdad estas fotos hacen revivir cada escena de nuestra boda, así como fue la boda de nuestros sueños, fuiste el fotógrafo de nuestros sueños. Estamos agradecidos por tu trabajo, puntualidad y la manera en que nos comprendiste al dar amor por cada una de estas fotos."</p>
+                            <p class="testimonial-name">YANELI & OMAR</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="testimonial-nav-arrows">
+                <div class="testimonial-nav-arrows text-[#f8f7f3]">
                     <button class="testimonial-arrow prev-btn">&#8592;</button>
                     <button class="testimonial-arrow next-btn">&#8594;</button>
                 </div>
@@ -522,80 +378,96 @@
         </section>
 
         <!-- SECCIÓN CONTACTO -->
-        <section id="contacto" class="page-section">
+        <section id="contacto" class="page-section text-[#2b2b2b]">
             <div class="container mx-auto px-6 py-20 md:py-32">
-                <div class="text-center mb-24 text-[#2b2b2b]">
-                    <h2 class="text-4xl md:text-5xl leading-tight uppercase">Tu boda no solo debe mostrarse</h2>
-                    <h3 class="text-4xl md:text-5xl leading-tight font-bold text-[#937b63] uppercase">Debe revivirse</h3>
+                <div class="text-center mb-24 uppercase">
+                    <h2 class="text-4xl md:text-5xl leading-tight">Tu boda no solo debe mostrarse</h2>
+                    <h3 class="text-4xl md:text-5xl leading-tight font-bold text-[#937b63]">Debe revivirse</h3>
                 </div>
-                
-                <div class="whatsapp-contact-card">
+                <div class="whatsapp-contact-card mb-48"> <!-- Espacio aumentado -->
                     <div class="whatsapp-card-header">
                         <img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1752514553/logo-FE-fondonegro_bctsg7.png" alt="Logo" class="w-12 h-12 rounded-full bg-white p-1">
-                        <div>
-                            <p class="font-bold text-lg leading-none">Saúl Díaz</p>
-                            <p class="text-sm opacity-80 mt-1">Finite Estudio</p>
-                        </div>
+                        <div><p class="font-bold text-lg leading-none">Saúl Díaz</p><p class="text-sm opacity-80 mt-1 text-[#f8f7f3]">Finite Estudio</p></div>
                     </div>
-                    <div class="whatsapp-card-body">
-                        <div class="whatsapp-card-bubble">
-                            Hola, soy Saúl Díaz. Cuéntame sobre tu boda, ¡me encantaría ayudarte a revivirla!
-                        </div>
-                        <a href="https://wa.me/5216643372791?text=Hola%20acabo%20de%20revisar%20tu%20sitio%20web%2C%20me%20gustar%C3%ADa%20cotizar%20la%20fotograf%C3%ADa%20para%20mi%20boda" target="_blank" class="button-style block w-full bg-[#25d366] text-white text-center py-4 rounded font-bold hover:bg-[#1ebe57] transition-colors text-lg tracking-widest uppercase">
-                            WHATSAPP
-                        </a>
+                    <div class="whatsapp-card-body text-center">
+                        <div class="whatsapp-card-bubble text-left text-[#2b2b2b]">Hola, soy Saúl Díaz. Cuéntame sobre tu boda, ¡me encantaría ayudarte a revivirla!</div>
+                        <a href="https://wa.me/5216643372791?text=Hola%20acabo%20de%20revisar%20tu%20sitio%20web%2C%20me%20gustar%C3%ADa%20cotizar%20la%20fotograf%C3%ADa%20para%20mi%20boda" target="_blank" class="button-style block w-full bg-[#25d366] text-white py-4 rounded font-bold hover:bg-[#1ebe57] transition-colors text-lg tracking-widest uppercase text-[#f8f7f3]">WHATSAPP</a>
                     </div>
                 </div>
             </div>
-            
-            <div class="testimonial-carousel-container bg-[#2b2b2b] text-[#f8f7f3] py-20 md:py-24 px-6 text-center relative overflow-hidden">
-                <h2 class="text-4xl md:text-5xl mb-12 uppercase">Testimonios</h2>
-                <div class="testimonial-track flex transition-transform duration-500 ease-in-out">
-                    <div class="testimonial-slide w-full flex-shrink-0 px-4"><div class="max-w-3xl mx-auto"><p class="text-lg text-[#f8f7f3]/90 italic mb-6">"¡Gracias por todo! Nos encantaron tus fotos. Estoy muy contenta con los recuerdos que creaste del día más bonito y más especial del inicio de nuestros 'juntos por siempre.'"</p><p class="testimonial-name">MARLENE & IRVING</p></div></div>
-                    <div class="testimonial-slide w-full flex-shrink-0 px-4"><div class="max-w-3xl mx-auto"><p class="text-lg text-[#f8f7f3]/90 italic mb-6">"No quería dejar pasar el agradecerte personalmente por todo tu trabajo el día de nuestra boda y por el resultado de nuestras fotos, ¡nos encantaron! No te miento cuando las empecé a ver me dieron ganas de llorar, lograste inmortalizar y capturar nuestras emociones ese día y ver las fotos es como volver a vivirlo, muchas muchas gracias."</p><p class="testimonial-name">ABIGAIL & ALEJANDRO</p></div></div>
-                    <div class="testimonial-slide w-full flex-shrink-0 px-4"><div class="max-w-3xl mx-auto"><p class="text-lg text-[#f8f7f3]/90 italic mb-6">"Gracias Saúl de verdad estas fotos hacen revivir cada escena de nuestra boda, así como fue la boda de nuestros sueños, fuiste el fotógrafo de nuestros sueños. Estamos agradecidos por tu trabajo, puntualidad y la manera en que nos comprendiste al dar amor por cada una de estas fotos."</p><p class="testimonial-name">YANELI & OMAR</p></div></div>
-                </div>
-                <div class="testimonial-nav-arrows">
-                    <button class="testimonial-arrow prev-btn">&#8592;</button>
-                    <button class="testimonial-arrow next-btn">&#8594;</button>
+
+            <!-- PREGUNTAS FRECUENTES (FULL WIDTH Y FONDO OSCURO) -->
+            <div class="w-full bg-[#2b2b2b] text-[#f8f7f3] py-32 px-6 mt-20">
+                <div class="max-w-5xl mx-auto">
+                    <h2 class="text-3xl text-left mb-16 font-bold tracking-wider uppercase text-[#f8f7f3]">PREGUNTAS FRECUENTES</h2>
+                    <div class="space-y-16">
+                        <div class="flex flex-col md:flex-row gap-6 md:gap-16 border-b border-[#f8f7f3]/10 pb-8">
+                            <div class="md:w-1/3"><h3 class="text-2xl font-bold leading-tight uppercase">¿Dónde estás ubicado?</h3></div>
+                            <div class="md:w-2/3"><p class="text-lg opacity-80 text-[#f8f7f3]">En Tijuana, Baja California. Pero mi cámara no se queja si la llevo de viaje.</p></div>
+                        </div>
+                        <div class="flex flex-col md:flex-row gap-6 md:gap-16 border-b border-[#f8f7f3]/10 pb-8">
+                            <div class="md:w-1/3"><h3 class="text-2xl font-bold leading-tight uppercase">¿Haces bodas destino?</h3></div>
+                            <div class="md:w-2/3"><p class="text-lg opacity-80 text-[#f8f7f3]">Sí. Si el amor viaja, yo también.</p></div>
+                        </div>
+                        <div class="flex flex-col md:flex-row gap-6 md:gap-16 border-b border-[#f8f7f3]/10 pb-8 text-[#f8f7f3]">
+                            <div class="md:w-1/3 text-[#f8f7f3]"><h3 class="text-2xl font-bold leading-tight uppercase text-[#f8f7f3]">¿Editas las fotos?</h3></div>
+                            <div class="md:w-2/3 text-[#f8f7f3]"><p class="text-lg opacity-80">Claro. Se hace una selección de las mejores fotos del día y se editan de manera detallada, pero sin exagerar.</p></div>
+                        </div>
+                        <div class="flex flex-col md:flex-row gap-6 md:gap-16 border-b border-[#f8f7f3]/10 pb-8 text-[#f8f7f3]">
+                            <div class="md:w-1/3 text-[#f8f7f3]"><h3 class="text-2xl font-bold leading-tight uppercase text-[#f8f7f3]">¿Qué métodos de pago aceptas?</h3></div>
+                            <div class="md:w-2/3 text-[#f8f7f3]"><p class="text-lg opacity-80">Efectivo, transferencia bancaria y pago con tarjeta.</p></div>
+                        </div>
+                        <div class="flex flex-col md:flex-row gap-6 md:gap-16 border-b border-[#f8f7f3]/10 pb-8 text-[#f8f7f3]">
+                            <div class="md:w-1/3 text-[#f8f7f3]"><h3 class="text-2xl font-bold leading-tight uppercase text-[#f8f7f3]">¿Cómo reservo la fecha de mi boda?</h3></div>
+                            <div class="md:w-2/3 text-[#f8f7f3]"><p class="text-lg opacity-80">Es simple: Agendamos una cita para decidir el paquete ideal para su boda. Si todo hace clic, firmas contrato y reservas con un anticipo. Y listo, la fecha es tuya.</p></div>
+                        </div>
+                        <div class="flex flex-col md:flex-row gap-6 md:gap-16 border-b border-[#f8f7f3]/10 pb-8 text-[#f8f7f3]">
+                            <div class="md:w-1/3 text-[#f8f7f3]"><h3 class="text-2xl font-bold leading-tight uppercase text-[#f8f7f3]">¿Cuánto tiempo tardas en entregar las fotos?</h3></div>
+                            <div class="md:w-2/3 text-[#f8f7f3]"><p class="text-lg opacity-80">El tiempo de entrega de tus fotos es de 30 a 35 días hábiles.</p></div>
+                        </div>
+                        <div class="flex flex-col md:flex-row gap-6 md:gap-16 border-b border-[#f8f7f3]/10 pb-8 text-[#f8f7f3]">
+                            <div class="md:w-1/3 text-[#f8f7f3]"><h3 class="text-2xl font-bold leading-tight uppercase text-[#f8f7f3]">¿Cuándo y dónde se hace la sesión Save the Date?</h3></div>
+                            <div class="md:w-2/3 text-[#f8f7f3]"><p class="text-lg opacity-80 text-[#f8f7f3]">Lo ideal es hacerla 3 a 6 meses antes de la boda. Tú eliges el lugar (también te recomiendo lugares) el mejor horario para que no haya luz fea. Y no te preocupes, no necesitas saber posar.</p></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- SECCIÓN ESTO ES REVIVIR (PORTAFOLIO) -->
+        <!-- SECCIÓN ESTO ES REVIVIR (PORTAFOLIO COMPLETO - 30 FOTOS) -->
         <section id="esto-es-revivir" class="page-section">
-            <div class="px-1 pt-0 pb-20 md:pb-32">
+            <div class="px-1 pt-0 pb-20 md:pb-32 text-[#2b2b2b]">
                 <div class="portfolio-gallery">
-                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1755892944/m_i_-_web_42_vg4znd.jpg" alt="Foto de portafolio"></div>
-                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947816/jpeg-optimizer_boda-l_e-70_ybr5bc.jpg" alt="Foto de portafolio"></div>
-                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1755714256/sn-m_i_84_iil2lk.jpg" alt="Foto de portafolio"></div>
-                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1755893177/a_r_-_web_15_zae6gx.jpg" alt="Foto de portafolio"></div>
-                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947825/jpeg-optimizer_boda-l_e-99_heqbc5.jpg" alt="Foto de portafolio"></div>
-                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1755714308/boda-a_a-339_xbgnra.jpg" alt="Foto de portafolio"></div>
-                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947816/jpeg-optimizer_boda-l_e-38_rvyqrx.jpg" alt="Foto de portafolio"></div>
-                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1755894727/boda-l_e-92_vugtow.jpg" alt="Foto de portafolio"></div>
-                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1755893177/a_r_-_web_1_f0pgxr.jpg" alt="Foto de portafolio"></div>
-                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947563/a_r_-_web_21_mdklo2.jpg" alt="Foto de portafolio"></div>
-                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1755714285/boda-y_o-304_hifnfq.jpg" alt="Foto de portafolio"></div>
-                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947563/a_r_-_web_23_k7sdlw.jpg" alt="Foto de portafolio"></div>
-                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947826/jpeg-optimizer_boda-l_e-36_utndsp.jpg" alt="Foto de portafolio"></div>
-                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947826/jpeg-optimizer_boda-l_e-34_m5g9rf.jpg" alt="Detalle de vestido" class="image-placeholder"></div>
-                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947816/jpeg-optimizer_boda-l_e-75_u7fsae.jpg" alt="Foto de portafolio"></div>
-                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947534/m_i_-_web_28_lqgdyp.jpg" alt="Foto de portafolio"></div>
-                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1755893180/a_r_-_web_28_eram4m.jpg" alt="Foto de portafolio"></div>
-                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947817/jpeg-optimizer_boda-l_e-87_uyfvog.jpg" alt="Foto de portafolio"></div>
-                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947620/a_r_-_web_17_ttogai.jpg" alt="Foto de portafolio"></div>
-                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947564/a_r_-_web_24_fyqhg9.jpg" alt="Foto de portafolio"></div>
-                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947587/a_r_-_web_13_twc7c5.jpg" alt="Foto de portafolio"></div>
-                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947826/jpeg-optimizer_boda-l_e-18_jzvh0n.jpg" alt="Foto de portafolio"></div>
-                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947825/jpeg-optimizer_boda-l_e-17_wkhlju.jpg" alt="Foto de portafolio"></div>
-                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947818/jpeg-optimizer_boda-l_e-94_vmxeu3.jpg" alt="Foto de portafolio"></div>
-                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947818/jpeg-optimizer_boda-l_e-92_qh86yo.jpg" alt="Foto de portafolio"></div>
-                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947818/jpeg-optimizer_boda-l_e-91_j2isgq.jpg" alt="Foto de portafolio"></div>
-                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947817/jpeg-optimizer_boda-l_e-84_wuaggq.jpg" alt="Foto de portafolio"></div>
-                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947817/jpeg-optimizer_boda-l_e-85_ixuarp.jpg" alt="Foto de portafolio"></div>
-                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947817/jpeg-optimizer_boda-l_e-81_ph4b9s.jpg" alt="Foto de portafolio"></div>
-                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947564/a_r_-_web_26_py8gyj.jpg" alt="Foto de portafolio"></div>
+                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1755892944/m_i_-_web_42_vg4znd.jpg" alt="Foto"></div>
+                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947816/jpeg-optimizer_boda-l_e-70_ybr5bc.jpg" alt="Foto"></div>
+                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1755714256/sn-m_i_84_iil2lk.jpg" alt="Foto"></div>
+                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1755893177/a_r_-_web_15_zae6gx.jpg" alt="Foto"></div>
+                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947825/jpeg-optimizer_boda-l_e-99_heqbc5.jpg" alt="Foto"></div>
+                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1755714308/boda-a_a-339_xbgnra.jpg" alt="Foto"></div>
+                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947816/jpeg-optimizer_boda-l_e-38_rvyqrx.jpg" alt="Foto"></div>
+                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1755894727/boda-l_e-92_vugtow.jpg" alt="Foto"></div>
+                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1755893177/a_r_-_web_1_f0pgxr.jpg" alt="Foto"></div>
+                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947563/a_r_-_web_21_mdklo2.jpg" alt="Foto"></div>
+                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1755714285/boda-y_o-304_hifnfq.jpg" alt="Foto"></div>
+                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947563/a_r_-_web_23_k7sdlw.jpg" alt="Foto"></div>
+                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947826/jpeg-optimizer_boda-l_e-36_utndsp.jpg" alt="Foto"></div>
+                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947826/jpeg-optimizer_boda-l_e-34_m5g9rf.jpg" alt="Foto"></div>
+                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947816/jpeg-optimizer_boda-l_e-75_u7fsae.jpg" alt="Foto"></div>
+                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947534/m_i_-_web_28_lqgdyp.jpg" alt="Foto"></div>
+                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1755893180/a_r_-_web_28_eram4m.jpg" alt="Foto"></div>
+                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947817/jpeg-optimizer_boda-l_e-87_uyfvog.jpg" alt="Foto"></div>
+                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947620/a_r_-_web_17_ttogai.jpg" alt="Foto"></div>
+                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947564/a_r_-_web_24_fyqhg9.jpg" alt="Foto"></div>
+                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947587/a_r_-_web_13_twc7c5.jpg" alt="Foto"></div>
+                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947826/jpeg-optimizer_boda-l_e-18_jzvh0n.jpg" alt="Foto"></div>
+                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947825/jpeg-optimizer_boda-l_e-17_wkhlju.jpg" alt="Foto"></div>
+                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947818/jpeg-optimizer_boda-l_e-94_vmxeu3.jpg" alt="Foto"></div>
+                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947818/jpeg-optimizer_boda-l_e-92_qh86yo.jpg" alt="Foto"></div>
+                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947818/jpeg-optimizer_boda-l_e-91_j2isgq.jpg" alt="Foto"></div>
+                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947817/jpeg-optimizer_boda-l_e-84_wuaggq.jpg" alt="Foto"></div>
+                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947817/jpeg-optimizer_boda-l_e-85_ixuarp.jpg" alt="Foto"></div>
+                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947817/jpeg-optimizer_boda-l_e-81_ph4b9s.jpg" alt="Foto"></div>
+                    <div class="portfolio-item"><img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1756947564/a_r_-_web_26_py8gyj.jpg" alt="Foto"></div>
                 </div>
             </div>
         </section>
@@ -604,30 +476,28 @@
         <section id="blog" class="page-section"><div class="text-center py-20 text-[#2b2b2b]"><h1 class="text-4xl uppercase">Blog</h1></div></section>
     </main>
     
-    <!-- Lightbox -->
     <div id="lightbox" class="lightbox">
         <span class="close">&times;</span>
         <span class="prev">&#10094;</span>
         <span class="next">&#10095;</span>
-        <img class="lightbox-content" id="lightbox-img">
+        <img class="lightbox-content" id="lightbox-img" src="">
     </div>
 
-    <!-- Pie de Página Estilizado -->
-    <footer class="py-16 px-6">
-        <div class="container mx-auto flex flex-col items-center gap-6 pt-4">
-            <div class="flex flex-col md:flex-row items-center justify-center gap-x-8 gap-y-6 w-full">
-                <div class="flex gap-5">
-                    <a href="#" class="nav-link text-[10px] tracking-widest hover:text-[#937b63] transition-colors uppercase text-[#2b2b2b]" data-page="home">Inicio</a>
-                    <a href="#" class="nav-link text-[10px] tracking-widest hover:text-[#937b63] transition-colors uppercase text-[#2b2b2b]" data-page="esto-es-revivir">Esto es Revivir</a>
-                    <a href="#" class="nav-link text-[10px] tracking-widest hover:text-[#937b63] transition-colors uppercase text-[#2b2b2b]" data-page="la-promesa">La Promesa</a>
+    <footer class="py-16 px-6 border-t border-[#2b2b2b]/10 text-[#2b2b2b]">
+        <div class="container mx-auto flex flex-col items-center gap-6 pt-4 text-center">
+            <div class="flex flex-col md:flex-row items-center justify-center gap-x-8 gap-y-6 w-full text-center text-[#2b2b2b]">
+                <div class="flex gap-5 text-[#2b2b2b]">
+                    <a href="#" class="nav-link text-[10px] tracking-widest hover:text-[#937b63] uppercase" data-page="home">Inicio</a>
+                    <a href="#" class="nav-link text-[10px] tracking-widest hover:text-[#937b63] uppercase" data-page="esto-es-revivir">Esto es Revivir</a>
+                    <a href="#" class="nav-link text-[10px] tracking-widest hover:text-[#937b63] uppercase" data-page="la-promesa">La Promesa</a>
                 </div>
                 <div class="text-center">
-                    <p class="footer-brand tracking-widest text-lg font-bold text-[#2b2b2b]">FINITE ESTUDIO 2026</p>
+                    <p class="footer-brand tracking-widest text-lg font-bold uppercase text-[#2b2b2b]">FINITE ESTUDIO 2026</p>
                 </div>
-                <div class="flex gap-5">
-                    <a href="#" class="nav-link text-[10px] tracking-widest hover:text-[#937b63] transition-colors uppercase text-[#2b2b2b]" data-page="sobre-mi">Sobre Mí</a>
-                    <a href="#" class="nav-link text-[10px] tracking-widest hover:text-[#937b63] transition-colors uppercase text-[#2b2b2b]" data-page="contacto">Contacto</a>
-                    <a href="#" class="nav-link text-[10px] tracking-widest hover:text-[#937b63] transition-colors uppercase text-[#2b2b2b]" data-page="blog">Blog</a>
+                <div class="flex gap-5 text-[#2b2b2b]">
+                    <a href="#" class="nav-link text-[10px] tracking-widest hover:text-[#937b63] uppercase text-[#2b2b2b]" data-page="sobre-mi">Sobre Mí</a>
+                    <a href="#" class="nav-link text-[10px] tracking-widest hover:text-[#937b63] uppercase text-[#2b2b2b]" data-page="contacto">Contacto</a>
+                    <a href="#" class="nav-link text-[10px] tracking-widest hover:text-[#937b63] uppercase text-[#2b2b2b]" data-page="blog">Blog</a>
                 </div>
             </div>
         </div>
@@ -635,12 +505,10 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Lógica de navegación
-            const navLinks = document.querySelectorAll('.nav-link, a[data-page]');
             const pageSections = document.querySelectorAll('.page-section');
             const hamburgerButton = document.getElementById('hamburger-button');
             const mobileMenu = document.getElementById('mobile-menu');
-            const closeMenuButton = document.getElementById('close-menu-button');
+            const header = document.getElementById('main-header');
 
             const showPage = (pageId) => {
                 pageSections.forEach(section => section.classList.remove('active'));
@@ -651,126 +519,102 @@
                 window.scrollTo(0, 0);
             };
             
-            const toggleMenu = () => {
-                 mobileMenu.classList.toggle('hidden');
-                 hamburgerButton.classList.toggle('hamburger-active');
-            }
-
-            navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const pageId = this.getAttribute('data-page');
-                    if(pageId) showPage(pageId);
-                });
+            document.querySelectorAll('[data-page]').forEach(link => {
+                link.onclick = (e) => { e.preventDefault(); showPage(link.getAttribute('data-page')); };
             });
 
-            hamburgerButton.addEventListener('click', toggleMenu);
-            closeMenuButton.addEventListener('click', toggleMenu);
-            showPage('home');
-            
-            const header = document.getElementById('main-header');
-            window.addEventListener('scroll', () => {
+            hamburgerButton.onclick = () => { mobileMenu.classList.toggle('hidden'); hamburgerButton.classList.toggle('hamburger-active'); };
+
+            window.onscroll = () => {
                 if (header) {
-                    if (window.scrollY > 10) {
-                        header.classList.add('header-scrolled');
-                    } else {
-                        header.classList.remove('header-scrolled');
-                    }
+                    if (window.scrollY > 10) header.classList.add('header-scrolled');
+                    else header.classList.remove('header-scrolled');
                 }
-            });
+            };
 
             // Carrusel Inicio
             const track = document.querySelector('.carousel-track');
             if (track) {
                 const items = Array.from(track.children);
-                let isCarouselSetup = false;
-                const setupCarousel = () => {
-                    if (isCarouselSetup) return;
-                    isCarouselSetup = true;
-                    items.forEach(item => track.appendChild(item.cloneNode(true)));
-                    let totalWidth = 0;
-                    items.forEach(item => totalWidth += item.offsetWidth);
-                    let currentIndex = 0;
-                    const advanceCarousel = () => {
-                        currentIndex++;
-                        track.style.transform = `translateX(-${currentIndex * (totalWidth / items.length)}px)`;
-                        if (currentIndex >= items.length) {
-                            setTimeout(() => {
-                                track.style.transition = 'none';
-                                currentIndex = 0;
-                                track.style.transform = 'translateX(0)';
-                                setTimeout(() => track.style.transition = 'transform 0.5s ease-in-out', 50);
-                            }, 500);
-                        }
-                    };
-                    setInterval(advanceCarousel, 4000);
-                };
-                const firstImg = track.querySelector('img');
-                if (firstImg && firstImg.complete) setupCarousel(); else if (firstImg) firstImg.onload = setupCarousel;
-            }
-            
-            // Mini Fade Carrusel
-            const miniFadeItems = document.querySelectorAll('.fade-carousel-item');
-            if(miniFadeItems.length > 0) {
-                let miniCurrentIndex = 0;
+                items.forEach(item => track.appendChild(item.cloneNode(true)));
+                let totalW = 0; items.forEach(i => totalW += i.offsetWidth);
+                let cur = 0;
                 setInterval(() => {
-                    miniFadeItems[miniCurrentIndex].classList.remove('active');
-                    miniCurrentIndex = (miniCurrentIndex + 1) % miniFadeItems.length;
-                    miniFadeItems[miniCurrentIndex].classList.add('active');
+                    cur++; track.style.transform = `translateX(-${cur * (totalW/items.length)}px)`;
+                    if (cur >= items.length) {
+                        setTimeout(() => { track.style.transition = 'none'; cur = 0; track.style.transform = 'translateX(0)'; setTimeout(() => track.style.transition = 'transform 0.5s', 50); }, 500);
+                    }
                 }, 4000);
             }
 
-            // Lightbox
-            const lightbox = document.getElementById('lightbox');
-            const lightboxImg = document.getElementById('lightbox-img');
-            const closeBtn = lightbox.querySelector('.close');
-            const prevBtn = lightbox.querySelector('.prev');
-            const nextBtn = lightbox.querySelector('.next');
-            const galleryImages = Array.from(document.querySelectorAll('.portfolio-gallery img')).map(img => img.src);
-            let currentImageIndex;
-            const showImage = (index) => {
-                if (index >= galleryImages.length) index = 0;
-                if (index < 0) index = galleryImages.length - 1;
-                lightboxImg.src = galleryImages[index];
-                currentImageIndex = index;
-            };
-            document.querySelectorAll('.portfolio-gallery img').forEach((img, index) => {
-                img.parentElement.addEventListener('click', () => {
-                     currentImageIndex = index;
-                     lightbox.style.display = 'flex';
-                     showImage(currentImageIndex);
-                });
-            });
-            const closeLightbox = () => lightbox.style.display = 'none';
-            prevBtn.addEventListener('click', () => showImage(currentImageIndex - 1));
-            nextBtn.addEventListener('click', () => showImage(currentImageIndex + 1));
-            closeBtn.addEventListener('click', closeLightbox);
-            lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+            // Mini Fade
+            const miniFades = document.querySelectorAll('.fade-carousel-item');
+            if(miniFades.length > 0) {
+                let idx = 0;
+                setInterval(() => {
+                    miniFades[idx].classList.remove('active');
+                    idx = (idx + 1) % miniFades.length;
+                    miniFades[idx].classList.add('active');
+                }, 4000);
+            }
 
-            // Testimonios
-            const testimonialCarousels = document.querySelectorAll('.testimonial-carousel-container');
-            testimonialCarousels.forEach(carousel => {
-                const track = carousel.querySelector('.testimonial-track');
-                const slides = Array.from(track.children);
-                const prevBtn = carousel.querySelector('.prev-btn');
-                const nextBtn = carousel.querySelector('.next-btn');
-                let currentIndex = 0;
-                if (slides.length > 0) {
-                    const moveToSlide = (index) => {
-                        if (index < 0) index = slides.length - 1;
-                        if (index >= slides.length) index = 0;
-                        track.style.transform = `translateX(-${index * 100}%)`;
-                        currentIndex = index;
-                    };
-                    prevBtn.addEventListener('click', () => moveToSlide(currentIndex - 1));
-                    nextBtn.addEventListener('click', () => moveToSlide(currentIndex + 1));
-                    moveToSlide(0);
-                }
+            // Lightbox Fix
+            const lightbox = document.getElementById('lightbox');
+            if (lightbox) {
+                const lbImg = document.getElementById('lightbox-img');
+                const closeBtn = lightbox.querySelector('.close');
+                const prevBtn = lightbox.querySelector('.prev');
+                const nextBtn = lightbox.querySelector('.next');
+                let galleryImgs = [];
+                let curIdx = 0;
+
+                const updateImgs = () => {
+                    galleryImgs = Array.from(document.querySelectorAll('.portfolio-gallery img')).map(img => img.src);
+                };
+
+                const showImg = (i) => {
+                    if (i < 0) i = galleryImgs.length - 1;
+                    if (i >= galleryImgs.length) i = 0;
+                    if (lbImg) lbImg.src = galleryImgs[i];
+                    curIdx = i;
+                };
+
+                document.addEventListener('click', (e) => {
+                    const item = e.target.closest('.portfolio-item');
+                    if (item) {
+                        updateImgs();
+                        const img = item.querySelector('img');
+                        curIdx = galleryImgs.indexOf(img.src);
+                        lightbox.style.display = 'flex';
+                        showImg(curIdx);
+                    }
+                });
+
+                if (closeBtn) closeBtn.onclick = () => lightbox.style.display = 'none';
+                if (prevBtn) prevBtn.onclick = (e) => { e.stopPropagation(); showImg(curIdx - 1); };
+                if (nextBtn) nextBtn.onclick = (e) => { e.stopPropagation(); showImg(curIdx + 1); };
+                lightbox.onclick = (e) => { if (e.target === lightbox) lightbox.style.display = 'none'; };
+            }
+
+            // Testimonios (Lógica para todos los carruseles de testimonios)
+            document.querySelectorAll('.testimonial-carousel-container').forEach(c => {
+                const tr = c.querySelector('.testimonial-track');
+                const s = Array.from(tr.children);
+                let i = 0;
+                const move = (n) => {
+                    if (n < 0) n = s.length - 1; if (n >= s.length) n = 0;
+                    tr.style.transform = `translateX(-${n * 100}%)`; i = n;
+                };
+                const pB = c.querySelector('.prev-btn');
+                const nB = c.querySelector('.next-btn');
+                if (pB) pB.onclick = () => move(i - 1);
+                if (nB) nB.onclick = () => move(i + 1);
             });
         });
     </script>
 </body>
 </html>
+
 
 
 
